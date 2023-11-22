@@ -25,6 +25,6 @@ pipeline {
         }
     }
     post {
-        archiveArtifacts 'htmlcov'
+        archiveArtifacts 'htmlcov/*'
     }
 }
