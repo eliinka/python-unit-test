@@ -25,7 +25,9 @@ pipeline {
         }
     }
     post {
-        archiveArtifacts 'htmlcov/*'
-        cobertura coberturaReportfile: 'coverage.xml'
+        always {
+            archiveArtifacts 'htmlcov/*'
+            cobertura coberturaReportFile: 'coverage.xml'
+        }
     }
 }
