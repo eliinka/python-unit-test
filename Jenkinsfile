@@ -26,5 +26,6 @@ pipeline {
     }
     post {
         archiveArtifacts 'htmlcov/*'
+        cobertura coberturaReportfile: 'coverage.xml'
     }
 }
